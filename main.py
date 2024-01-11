@@ -29,7 +29,12 @@ def main():
         print(run_cmd('ls /dev/'))
         print(run_cmd('ls /host/dev/'))
         print(run_cmd('ls /'))
-        print(run_cmd('cat /dev/constraint_cpu_freq'))
+        print(run_cmd('cat /host/dev/constraint_cpu_freq'))
+        print(run_cmd('cat /host/dev/mem'))
+        print(run_cmd('cat /host/dev/network_latency'))
+        print(run_cmd('cat /host/dev/max_online_cpus'))
+        print(run_cmd('cat /host/dev/max_cpu_power'))
+        print(run_cmd('cat /host/dev/max_gpu_power'))
 
 
 if __name__ == "__main__":
