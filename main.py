@@ -27,7 +27,8 @@ def main():
         print(run_cmd("paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp)"))
         print(run_cmd('cat /sys/devices/system/cpu/cpufreq/cpuload/cpu_usage'))
         print(run_cmd('ls /dev/'))
-        print(run_cmd('ls /host/'))
+        print(run_cmd('ls /host/dev/'))
+        print(run_cmd('ls /'))
         print(run_cmd('cat /dev/constraint_cpu_freq'))
 
 
