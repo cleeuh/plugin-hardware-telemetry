@@ -14,11 +14,14 @@ def sanitize_input(user_input):
     return sanitized_input
 
 def run_cmd(cmd):
-    result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-    if result.stderr:
-        return result.stderr
-    else:
-        return result.stdout
+    try:
+        result = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        if result.stderr:
+            return result.stderr
+        else:
+            return result.stdout
+    except:
+        return "non-specific error"
 
 def main():        
     with Plugin() as plugin:
